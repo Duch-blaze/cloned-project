@@ -14,7 +14,7 @@ pipeline {
         stage("Checkout from SCM"){
                 steps {
                     // git branch: 'main', credentialsId: 'Github-Credentials', url: 'https://github.com/Ashfaque-9x/register-app'
-                    git credentialsId: 'Github-Credentials', url: 'https://github.com/Duch-blaze/api'
+                    git credentialsId: 'Github-Credentials', url: 'https://github.com/Duch-blaze/cloned-project.git'
                 }
         }
 
@@ -25,7 +25,7 @@ pipeline {
 
        }
 
-       stage("Test Application"){
+       stage("Test-Application"){
            steps {
                  sh "mvn test"
            }
